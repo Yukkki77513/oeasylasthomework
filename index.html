@@ -14,58 +14,144 @@
 
         header {
             background-color: #4CAF50;
-            color: white;
             text-align: center;
             padding: 20px;
         }
 
         h1 {
             font-size: 2.5em;
+            font-weight: bold;
+            color: #008C45; /* 豆瓣绿 */
+        }
+
+        h1 span {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        h1 span:hover {
+            color: #FF5733; /* 悬浮时改变颜色 */
+        }
+
+        h1 span::after {
+            content: "评分最高的美式喜剧";
+            display: none;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.75);
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 0.8em;
+            margin-left: 10px;
+        }
+
+        h1 span:hover::after {
+            display: inline-block;
         }
 
         h2 {
-            color: #333;
+            color: #60A56E; /* 比豆瓣绿更浅的绿色 */
         }
 
-        section {
+        .content {
+            display: flex;
+            align-items: center;
             margin: 20px;
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .poster {
+            width: 150px;
+            height: 220px;
+            background-color: #ddd; /* 占位符颜色 */
+            margin-right: 20px;
+        }
+
+        .poster img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         p {
             font-size: 1.2em;
             line-height: 1.6em;
+            flex: 1;
+        }
+
+        .download-link {
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .download-link:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>关于《生活大爆炸》，豆友们都在说些啥？</h1>
+        <h1>关于 <span>《生活大爆炸》</span>，豆友们都在说些啥？</h1>
     </header>
 
-    <section>
-        <h2>《生活大爆炸》第一季</h2>
-        <p>111</p>
+    <section class="content">
+        <div class="poster">
+            <img src="1.jpg" alt="《生活大爆炸》第一季">
+        </div>
+        <div>
+            <h2>《生活大爆炸》第一季</h2>
+            <p>111</p>
+            <a href="处理1.xlsx" class="download-link">大家都在说什么？点击这里下载详情。</a>
+        </div>
     </section>
 
-    <section>
-        <h2>《生活大爆炸》第二季</h2>
-        <p>111</p>
+    <section class="content">
+        <div class="poster">
+            <img src="2.jpg" alt="《生活大爆炸》第二季">
+        </div>
+        <div>
+            <h2>《生活大爆炸》第二季</h2>
+            <p>111</p>
+            <a href="处理2.xlsx" class="download-link">大家都在说什么？点击这里下载详情。</a>
+        </div>
     </section>
 
-    <section>
-        <h2>《生活大爆炸》第三季</h2>
-        <p>111</p>
+    <section class="content">
+        <div class="poster">
+            <img src="3.jpg" alt="《生活大爆炸》第三季">
+        </div>
+        <div>
+            <h2>《生活大爆炸》第三季</h2>
+            <p>111</p>
+            <a href="处理3.xlsx" class="download-link">大家都在说什么？点击这里下载详情。</a>
+        </div>
     </section>
 
-    <section>
-        <h2>《生活大爆炸》第四季</h2>
-        <p>111</p>
+    <section class="content">
+        <div class="poster">
+            <img src="4.jpg" alt="《生活大爆炸》第四季">
+        </div>
+        <div>
+            <h2>《生活大爆炸》第四季</h2>
+            <p>111</p>
+            <a href="处理4.xlsx" class="download-link">大家都在说什么？点击这里下载详情。</a>
+        </div>
     </section>
 
-    <section>
-        <h2>《生活大爆炸》第五季</h2>
-        <p>111</p>
+    <section class="content">
+        <div class="poster">
+            <img src="5.jpg" alt="《生活大爆炸》第五季">
+        </div>
+        <div>
+            <h2>《生活大爆炸》第五季</h2>
+            <p>111</p>
+            <a href="处理5.xlsx" class="download-link">大家都在说什么？点击这里下载详情。</a>
+        </div>
     </section>
 
 </body>
